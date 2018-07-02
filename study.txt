@@ -1,0 +1,15 @@
+1.MyBatis通用Mapper下载地址：
+通用Mapper插件网址：https://github.com/abel533/Mapper
+
+2.Spring Boot MyBatis 通用Mapper插件集成
+http://blog.csdn.net/catoop/article/details/50684676
+
+3.@EnableAntoConfiguration
+如果需要启动自动配置，则需要配置文件yml按规范配置
+spring-boot-autoconfigure-1.5.3.RELEASE.jar包里提供了一些配置文件会依赖yml文件配置，比如jdbc
+
+4.Spring与Mybatis整合的MapperScannerConfigurer处理过程源码分析
+http://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html
+
+5.这里使用tomcat自带的jdbc连接池
+org.springframework.boot.autoconfigure.jdbc.DataSourceProperties会使用yml文件中的配置
