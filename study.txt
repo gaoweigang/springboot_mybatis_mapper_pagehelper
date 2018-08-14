@@ -13,3 +13,6 @@ http://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-ana
 
 5.这里使用tomcat自带的jdbc连接池
 org.springframework.boot.autoconfigure.jdbc.DataSourceProperties会使用yml文件中的配置
+
+6.Springboot集成分页插件pageHelper与spring集成分页插件略有不同
+https://blog.csdn.net/qq_29992111/article/details/79097474

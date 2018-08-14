@@ -36,17 +36,41 @@
 			<artifactId>mapper</artifactId>
 			<version>3.4.0</version>
 		</dependency>
-		  <!-- 分页插件 -->
-       <!--  <dependency>
+		  <!-- 分页插件 在Spring中使用 还需要在mybatis配置文件中配置 -->
+         <!--<dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
-            <version>4.1.1</version>
-        </dependency> -->
+            <version>5.1.1</version>
+        </dependency>-->
+		<!--分页插件 在springboot中使用这个-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.1</version>
+		</dependency>
          <!-- mysql jdbc驱动 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.0.3</version>
+		</dependency>
+
+		<!--logback日志组件 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.21</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.7</version>
 		</dependency>
 
 	</dependencies>

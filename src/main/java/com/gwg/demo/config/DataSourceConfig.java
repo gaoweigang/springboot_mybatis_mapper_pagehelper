@@ -40,9 +40,15 @@ public class DataSourceConfig{
 	/**
 	 * 生成一个名字为 sqlSessionFactory 的bean
 	 * mybatis的sqlSessionFactory配置
+	 *
+	 * 这个配置等价于application.yml文件的如下配置：
+	 *
+	 * mybatis:
+	 *	   mapperLocations: classpath*:com/gwg/demo/mapper/*.xml
+	 *	   typeAliasesPackage: com.gwg.demo.model
 	 * @param dataSource
 	 */
-	@Bean(name="sqlSessionFactory")
+/*	@Bean(name="sqlSessionFactory")
 	@ConditionalOnMissingBean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception{
     	SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
@@ -56,7 +62,7 @@ public class DataSourceConfig{
 			e.printStackTrace();	
 		}
     	return bean.getObject();
-    }
+    }*/
 	
     
     @Bean
@@ -71,15 +77,20 @@ public class DataSourceConfig{
 	 * mapper接口扫描包
 	 * org.mybatis.spring.mapper.MapperScannerConfigurer 与 tk.mybatis.spring.mapper.MapperScannerConfigurer 区别？
 	 * 这里要使用MyBatis通用Mapper里面的类MapperScannerConfigurer，否则会报找不到表
+	 *
+	 * 这段配置等价于
+	 *
+	 * @MapperScan("com.gwg.demo.mapper")
+	 *
 	 */
-    @Bean
+    /*@Bean
     @ConditionalOnBean({DataSource.class, SqlSessionFactory.class, SqlSessionFactoryBean.class})
     public MapperScannerConfigurer mapperScannerConfigurer(){
 		MapperScannerConfigurer configurer = new MapperScannerConfigurer();
 		configurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
 		configurer.setBasePackage("com.gwg.demo.mapper");
 		return configurer;
-	}
+	}*/
 	
     
     /**

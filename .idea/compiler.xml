@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_mybatis_mapper" />
+        <module name="springboot_mybatis_mapper_pagehelper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot_mybatis_mapper" target="1.6" />
+      <module name="springboot_mybatis_mapper_pagehelper" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

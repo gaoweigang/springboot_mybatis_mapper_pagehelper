@@ -12,9 +12,17 @@
   </sql>
   
   <select id="queryStudentByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from Student
     where name = #{name,jdbcType=VARCHAR}
   </select>
+
+  <select id="queryStudentByLimit" resultMap="BaseResultMap" parameterType="com.gwg.demo.dto.StudentDto" >
+    select
+    <include refid="Base_Column_List" />
+    from Student
+    where age BETWEEN #{startAge,jdbcType=VARCHAR} and #{endAge,jdbcType=VARCHAR}
+  </select>
+
 </mapper>

@@ -1,6 +1,7 @@
 package com.gwg.demo;
 
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @SpringBootApplication//启动了自动配置，如果配置文件中有数据库的配置，则会自动创建dataSource
+@MapperScan("com.gwg.demo.mapper")
 public class Application{
 	
 	/**

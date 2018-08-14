@@ -2,7 +2,10 @@ package com.gwg.demo.service;
 
 import java.util.Map;
 
+import com.github.pagehelper.PageInfo;
+import com.gwg.demo.dto.StudentDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,20 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.gwg.demo.mapper.StudentMapper;
 import com.gwg.demo.model.Student;
 
-@RestController
-public class StudentService {
-	
-	@Autowired(required=true)
-	private StudentMapper studentMapper;
-	
-	@RequestMapping(value = "/getStudentByName", method = RequestMethod.POST,
-			   consumes = "application/json", produces = "application/json")
-	public @ResponseBody Student getStudentByName(@RequestBody Student student){
-		System.out.println("studentMapper："+studentMapper);
-		String name = student.getName();
-		System.out.println(name);
-		Student result =  studentMapper.queryStudentByName(name);
-		return result;
-	}
+public interface StudentService {
+
+	public Student getStudentByName(String name);
+
+	/**
+	 * 分页
+	 */
+	public PageInfo<Student> queryStudentByLimit(StudentDto dto);
 
 }

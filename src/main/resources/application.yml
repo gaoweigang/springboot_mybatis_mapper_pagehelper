@@ -15,8 +15,14 @@ spring:
             testWhileIdle: true
             testOnBorrow: false
             testOnReturn: false
-        
+
 mybatis:
         mapperLocations: classpath*:com/gwg/demo/mapper/*.xml
         typeAliasesPackage: com.gwg.demo.model
-       
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
