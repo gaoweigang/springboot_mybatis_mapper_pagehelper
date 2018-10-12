@@ -83,14 +83,14 @@ public class DataSourceConfig{
 	 * @MapperScan("com.gwg.demo.mapper")
 	 *
 	 */
-    /*@Bean
+    @Bean
     @ConditionalOnBean({DataSource.class, SqlSessionFactory.class, SqlSessionFactoryBean.class})
     public MapperScannerConfigurer mapperScannerConfigurer(){
 		MapperScannerConfigurer configurer = new MapperScannerConfigurer();
 		configurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
 		configurer.setBasePackage("com.gwg.demo.mapper");
 		return configurer;
-	}*/
+	}
 	
     
     /**
